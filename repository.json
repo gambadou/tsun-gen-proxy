@@ -1,0 +1,12 @@
+{
+  "name": "TSUN Gen3 Proxy Add-on",
+  "url": "https://github.com/ton-compte/tsun-gen3-proxy-ha-addon",
+  "maintainer": "Ton Nom",
+  "addons": {
+    "tsun-gen3-proxy": {
+      "name": "TSUN Gen3 Proxy",
+      "repository": "local",
+      "target": "tsun-gen3-proxy"
+    }
+  }
+}
