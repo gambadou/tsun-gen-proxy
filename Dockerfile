@@ -2,7 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Installer le proxy directement depuis GitHub
+# Installer git et outils nécessaires pour pip
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git gcc libc-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+# Installer le proxy depuis GitHub
 RUN pip install --no-cache-dir git+https://github.com/s-allius/tsun-gen3-proxy.git
 
 COPY run.sh /run.sh
