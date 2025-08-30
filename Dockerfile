@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Cloner le dépôt depuis GitHub
-RUN git clone https://github.com/s-allius/tsun-gen3-proxy.git /app/tsun-gen3-proxy
+RUN git clone https://github.com/gambadou/tsun-gen3-proxy-modifiet.git /app/tsun-gen3-proxy
 
 # Installer les dépendances Python (y compris 'schema' si présent dans requirements.txt)
 RUN if [ -f /app/tsun-gen3-proxy/requirements.txt ]; then pip install -r /app/tsun-gen3-proxy/requirements.txt; fi
